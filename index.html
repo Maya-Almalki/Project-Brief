@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منصة موجز المشروع</title>
+    <meta
+      name="description"
+      content="منصة احترافية لتوثيق ومراجعة معلومات المشاريع بشكل منظم وواضح."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-one"></div>
+    <div class="bg-orb orb-two"></div>
+
+    <header class="topbar">
+      <div class="brand-block">
+        <img src="assets/logo.svg" alt="شعار المنصة" />
+        <div>
+          <h1>منصة موجز المشروع</h1>
+          <p>إطار تنظيمي واحترافي لتوثيق احتياجات المشاريع</p>
+        </div>
+      </div>
+      <button id="themeToggle" class="icon-button" type="button" aria-label="تبديل الوضع" title="تبديل بين الوضع الفاتح والداكن">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </header>
+
+    <main class="app-shell">
+      <section class="hero glass-card">
+        <div class="hero-copy">
+          <p class="eyebrow">إطار عمل إداري وإبداعي</p>
+          <h2>أنشئ موجزاً احترافياً شاملاً لبدء مشروعك بثقة.</h2>
+          <p>
+            وثّق احتياجات العميل، وحدّد نطاق العمل، وأرسل ملخصاً واضحاً يسهّل التنسيق بين الفريق والجهة المعنية.
+          </p>
+          <div class="hero-actions">
+            <a href="#briefForm" class="primary-btn">ابدأ إعداد الموجز</a>
+            <a href="#faq" class="secondary-btn">اطّلع على الإرشادات</a>
+          </div>
+        </div>
+        <div class="hero-metrics">
+          <div class="metric-card">
+            <strong>6</strong>
+            <span>مراحل منظمة</span>
+          </div>
+          <div class="metric-card">
+            <strong>100%</strong>
+            <span>تصميم متجاوب</span>
+          </div>
+          <div class="metric-card">
+            <strong>24/7</strong>
+            <span>حفظ آمن</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="form-card glass-card" id="briefForm">
+        <div class="progress-shell">
+          <p id="saveStatus" class="save-status">تم حفظ البيانات تلقائيًا...</p>
+          <div class="progress-bar">
+            <div id="progressFill" class="progress-fill"></div>
+          </div>
+          <div class="stepper" id="stepper">
+            <button type="button" class="step-item active" data-step="1">
+              <span class="step-number">1</span>
+              <span class="step-name">العميل</span>
+            </button>
+            <button type="button" class="step-item" data-step="2">
+              <span class="step-number">2</span>
+              <span class="step-name">المشروع</span>
+            </button>
+            <button type="button" class="step-item" data-step="3">
+              <span class="step-number">3</span>
+              <span class="step-name">الأسئلة</span>
+            </button>
+            <button type="button" class="step-item" data-step="4">
+              <span class="step-number">4</span>
+              <span class="step-name">العامة</span>
+            </button>
+            <button type="button" class="step-item" data-step="5">
+              <span class="step-number">5</span>
+              <span class="step-name">المراجعة</span>
+            </button>
+            <button type="button" class="step-item" data-step="6">
+              <span class="step-number">6</span>
+              <span class="step-name">إتمام</span>
+            </button>
+          </div>
+        </div>
+
+        <form id="briefFormElement" novalidate>
+          <section class="step-panel active" data-step="1">
+            <div class="section-heading">
+              <p class="eyebrow">الخطوة 1</p>
+              <h3>معلومات العميل والجهة</h3>
+              <p>ابدأ بالأساسيات الأساسية لتكوين صورة واضحة عن العميل أو الجهة المعنية.</p>
+            </div>
+            <div class="field-grid">
+              <div class="field-group">
+                <input id="clientName" name="clientName" type="text" required />
+                <label for="clientName">اسم العميل أو الجهة</label>
+              </div>
+              <div class="field-group">
+                <input id="companyName" name="companyName" type="text" required />
+                <label for="companyName">اسم الشركة أو الجهة</label>
+              </div>
+              <div class="field-group">
+                <input id="email" name="email" type="email" required />
+                <label for="email">البريد الإلكتروني الرسمي</label>
+              </div>
+              <div class="field-group">
+                <input id="phone" name="phone" type="tel" required />
+                <label for="phone">رقم التواصل</label>
+              </div>
+              <div class="field-group">
+                <input id="website" name="website" type="url" required />
+                <label for="website">الموقع الإلكتروني الرسمي</label>
+              </div>
+              <div class="field-group">
+                <input id="industry" name="industry" type="text" required />
+                <label for="industry">قطاع العمل أو الصناعة</label>
+              </div>
+            </div>
+          </section>
+
+          <section class="step-panel" data-step="2">
+            <div class="section-heading">
+              <p class="eyebrow">الخطوة 2</p>
+              <h3>تفاصيل المشروع وملامح التنفيذ</h3>
+              <p>حدّد نطاق العمل والميزانية والجدول الزمني بما يضمن وضوح الرؤية والالتزام بالمسار التنفيذي.</p>
+            </div>
+            <div class="field-grid">
+              <div class="field-group">
+                <input id="projectName" name="projectName" type="text" required />
+                <label for="projectName">اسم المشروع</label>
+              </div>
+              <div class="field-group">
+                <select id="projectType" name="projectType" required>
+                  <option value="الهويات البصرية">الهويات البصرية</option>
+                  <option value="الحملة الإعلانية">الحملة الإعلانية</option>
+                  <option value="تصميم الموقع">تصميم الموقع</option>
+                  <option value="التطبيق المحمول">التطبيق المحمول</option>
+                  <option value="وسائل التواصل">وسائل التواصل</option>
+                  <option value="إنتاج الفيديو">إنتاج الفيديو</option>
+                </select>
+                <label for="projectType">نوع المشروع</label>
+              </div>
+              <div class="field-group">
+                <input id="budget" name="budget" type="text" required />
+                <label for="budget">الميزانية المتوقعة</label>
+              </div>
+              <p class="helper-text full-width">حدد المسؤول التنفيذي، تاريخ البدء، وتاريخ التسليم النهائي بوضوح تام.</p>
+              <div class="timeline-row full-width">
+                <div class="field-group top-label">
+                  <label for="timelinePerson">المسؤول التنفيذي</label>
+                  <input id="timelinePerson" name="timelinePerson" type="text" required />
+                </div>
+                <div class="field-group top-label">
+                  <label for="timelineDate">تاريخ البدء</label>
+                  <input id="timelineDate" name="timelineDate" type="date" required />
+                </div>
+                <div class="field-group top-label">
+                  <label for="deadline">تاريخ التسليم المتوقع</label>
+                  <input id="deadline" name="deadline" type="date" required />
+                </div>
+              </div>
+              <div class="field-group full-width">
+                <textarea id="projectDescription" name="projectDescription" rows="4" required></textarea>
+                <label for="projectDescription">وصف المشروع والأهمية</label>
+                <div class="counter-row">
+                  <span>لخص الفرصة أو الحاجة الأساسية.</span>
+                  <span class="counter" data-counter="projectDescription" data-max="240"></span>
+                </div>
+              </div>
+              <div class="field-group full-width">
+                <textarea id="objectives" name="objectives" rows="4" required></textarea>
+                <label for="objectives">الأهداف الأساسية</label>
+                <div class="counter-row">
+                  <span>اذكر الأهداف الرئيسية بوضوح.</span>
+                  <span class="counter" data-counter="objectives" data-max="220"></span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="step-panel" data-step="3">
+            <div class="section-heading">
+              <p class="eyebrow">الخطوة 3</p>
+              <h3>أسئلة مخصصة بحسب نوع المشروع</h3>
+              <p>تتغير هذه الأسئلة وفقًا لنوع المشروع لضمان دقة المعلومات وملاءمتها للهدف المطلوب.</p>
+            </div>
+            <div id="dynamicQuestions" class="field-grid"></div>
+          </section>
+
+          <section class="step-panel" data-step="4">
+            <div class="section-heading">
+              <p class="eyebrow">الخطوة 4</p>
+              <h3>أسئلة استراتيجية عامة</h3>
+              <p>شارك الصورة الأكبر حتى يتمكن الفريق من التوافق بسرعة وكفاءة.</p>
+            </div>
+            <div class="field-grid">
+              <div class="field-group full-width">
+                <textarea id="businessChallenges" name="businessChallenges" rows="4" required></textarea>
+                <label for="businessChallenges">التحديات التشغيلية أو التجارية</label>
+              </div>
+              <div class="field-group full-width">
+                <textarea id="successMetrics" name="successMetrics" rows="4" required></textarea>
+                <label for="successMetrics">مؤشرات النجاح</label>
+              </div>
+              <div class="field-group">
+                <input id="preferredStyle" name="preferredStyle" type="text" required />
+                <label for="preferredStyle">الأسلوب أو التوجه المفضل</label>
+              </div>
+              <div class="field-group">
+                <input id="references" name="references" type="text" required />
+                <label for="references">المراجع أو الأمثلة المرجعية</label>
+              </div>
+              <div class="field-group full-width">
+                <textarea id="additionalNotes" name="additionalNotes" rows="3"></textarea>
+                <label for="additionalNotes">ملاحظات أو توجيهات إضافية</label>
+              </div>
+              <div class="field-group full-width upload-card">
+                <label class="upload-label" for="fileUpload">رفع ملف</label>
+                <input id="fileUpload" name="fileUpload" type="file" />
+                <p id="uploadStatus" class="upload-status">أرفق ملفات الإلهام أو المستندات أو أصول الهوية البصرية إذا كانت متاحة.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="step-panel" data-step="5">
+            <div class="section-heading">
+              <p class="eyebrow">الخطوة 5</p>
+              <h3>مراجعة موجز المشروع</h3>
+              <p>راجع كافة التفاصيل قبل الإرسال النهائي.</p>
+            </div>
+            <div id="reviewContent" class="review-list"></div>
+          </section>
+
+          <section class="step-panel success-panel" data-step="6">
+            <div class="success-card">
+              <div id="successCheck" class="success-check">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <h3>تمت معالجة موجز المشروع بنجاح.</h3>
+              <p>
+                تم حفظ النسخة محلياً وسيبدأ الفريق العمل على المسودة الأولى وفقاً للمتطلبات التي تم توضيحها.
+              </p>
+              <div class="export-card">
+                <button type="button" id="exportBtn" class="secondary-btn">تصدير الوثيقة</button>
+              </div>
+              <button type="button" id="startOverBtn" class="primary-btn">ابدأ موجزاً جديداً</button>
+            </div>
+          </section>
+        </form>
+
+        <div class="form-actions">
+          <button type="button" id="prevBtn" class="secondary-btn">السابق</button>
+          <button type="button" id="resetBtn" class="ghost-btn">إعادة تعيين</button>
+          <button type="button" id="nextBtn" class="primary-btn">التالي</button>
+        </div>
+      </section>
+
+      <section class="faq-card glass-card" id="faq">
+        <div class="section-heading">
+          <p class="eyebrow">الدعم</p>
+          <h3>الأسئلة الشائعة</h3>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              كم يستغرق إكمال هذا النموذج؟
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="faq-answer">
+              <p>يمكن إكمال معظم موجزات المشاريع خلال أقل من 10 دقائق باستخدام الخطوات الموجهة.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              هل يتم حفظ تقدمي؟
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="faq-answer">
+              <p>نعم، يتم حفظ البيانات محلياً بشكل آمن حتى تتمكن من المتابعة لاحقاً عند الحاجة.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              هل يمكنني تعديل إرسالي بعد مراجعته؟
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="faq-answer">
+              <p>بالتأكيد. تتيح لك شاشة المراجعة العودة إلى أي خطوة قبل الإرسال النهائي.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="loaderOverlay" class="loader-overlay" aria-hidden="true">
+      <div class="loader-card">
+        <div class="loader-ring"></div>
+        <p>يتم تجهيز طلبك...</p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>مصمم لفرق العمل الإبداعية والتنفيذية التي تضع الجودة والوضوح في مقدمة أولوياتها.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
